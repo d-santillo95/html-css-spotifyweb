@@ -12,15 +12,34 @@
         <main>
             <div id="main-view">
                 <header>
-                    <a href="#">
+                    <a class="visible-xs" href="#">
                         <i class="fas fa-cog fa-2x"></i>
                     </a>
+                    <div class="hidden-xs container-account">
+                        <button class="arrow-nav circle"><i class="fas fa-angle-left"></i></button>
+                        <button class="arrow-nav circle"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                    <div class="hidden-xs container-account">
+                        <a class="visible-md btn" href="#">
+                            Effettua l'upgrade
+                        </a>
+                        <button class="visible-sm account">
+                            <img class="circle"src="https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/26169125_1754340758206102_4158860540687639224_n.jpg?_nc_cat=100&_nc_sid=85a577&_nc_oc=AQlxznj7ViFUe11u1aJJLcsQf0s9Vfp0jM5M-gRa-Q39I9AGSGPQShWPHHzyPybGH3w&_nc_ht=scontent-mxp1-1.xx&oh=db48add5e6fdcb4b347527857cc19819&oe=5EB3ED88" alt="Daniele Santillo" width="32px" height="32px">
+                            <span class="visible-md">Daniele Santillo</span>
+                            <span class="visible-md"><i class="fas fa-caret-down"></i></span>
+                        </button>
+                    </div>
                 </header>
                 <div id="view-container">
                     <div class="row-container">
-                        <a class="title-row" href="#">
-                            Ascoltate di recente
-                        </a>
+                        <div class="row-title">
+                            <a class="title-section" href="#">
+                                Ascoltate di recente
+                            </a>
+                            <a class="show-all hidden-xs" href="#">
+                                Visualizza tutto
+                            </a>
+                        </div>
                         <div class="row">
                             <a class="box" href="#">
                                 <div class="wrap-img">
@@ -53,9 +72,14 @@
                         </div>
                     </div>
                     <div class="row-container">
-                        <a class="title-row" href="#">
-                            Ascoltate di recente
-                        </a>
+                        <div class="row-title">
+                            <a class="title-section" href="#">
+                                Ascoltate di recente
+                            </a>
+                            <a class="show-all hidden-xs" href="#">
+                                Visualizza tutto
+                            </a>
+                        </div>
                         <div class="row">
                             <a class="box" href="#">
                                 <div class="wrap-img">
@@ -88,9 +112,14 @@
                         </div>
                     </div>
                     <div class="row-container">
-                        <a class="title-row" href="#">
-                            Ascoltate di recente
-                        </a>
+                        <div class="row-title">
+                            <a class="title-section" href="#">
+                                Ascoltate di recente
+                            </a>
+                            <a class="show-all hidden-xs" href="#">
+                                Visualizza tutto
+                            </a>
+                        </div>
                         <div class="row">
                             <a class="box" href="#">
                                 <div class="wrap-img">
@@ -122,6 +151,7 @@
                             </a>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div id="main-player">
@@ -156,7 +186,7 @@
                     <i class="fas fa-search"></i>
                     <span>Cerca</span>
                 </button>
-                <button class="hidden-sm">
+                <button class="visible-xs">
                     <i class="fab fa-spotify"></i>
                     <span>Scarica l'app</span>
                 </button>
