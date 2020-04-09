@@ -24,12 +24,17 @@ button:hover{
 }
 
 .row-container{
-    padding: 15px;
+    padding: 24px;
 }
 
 
 .title-row{
     font-size: 24px;
+    font-weight: 800;
+}
+
+.title-row:hover{
+    text-decoration: underline;
 }
 
 .row{
@@ -40,10 +45,31 @@ button:hover{
 
 .box{
     flex-shrink: 0;
-    max-width: 140px;
+    width: 170px;
     margin-right: 15px;
     display: flex;
     flex-direction: column;
+}
+
+.title-box{
+    font-size: 14px;
+    font-weight: 800;
+    margin: 15px 0 10px;
+}
+
+.description{
+    opacity: .5;
+    font-size: 13px;
+    font-weight: 400;
+    height: 36px;
+}
+
+.description span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 100%;
 }
 
 .circle{
@@ -61,7 +87,8 @@ button:hover{
 
 #main-view{
     height: calc(100vh - 110px);
-    background-image: linear-gradient(to bottom right, #222, #111, #000 80%);
+    background-image: linear-gradient(to bottom right, #aaa 1%, #333, #222, #111, #000);
+    overflow-y: auto;
 }
 
 header{
@@ -229,6 +256,37 @@ header a{
         height: calc(100vh - 90px);
         background-color: #111;
         background-image: none;
+    }
+
+    .box{
+        flex-grow: 1;
+        flex-shrink: 1;
+        background-color: #222;
+        padding: 15px;
+        min-width: 170px;
+        max-width: 210px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .box::after{
+        content: "\f04b";
+        color: #fff;
+        font-size: 14px;
+        font-weight: 800;
+        display: none;
+        font-family: "Font Awesome 5 Free";
+        padding: 13px;
+        padding-left: 15px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        background-color: #1db954;
+    }
+
+    .box:hover::after{
+        display: block;
     }
 
     #main-player{
