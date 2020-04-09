@@ -51,8 +51,8 @@ button:hover{
 }
 
 .square{
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
 }
 
 .box img{
@@ -100,6 +100,7 @@ header a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: .5;
 }
 
 #main-menu i{
@@ -111,13 +112,17 @@ header a{
     margin-top: 5px;
 }
 
-@media (min-width: 768px) {
-    *{
-        color: #b3b3b3;
-    }
+#main-menu .active{
+    opacity: 1;
+}
 
+@media (min-width: 768px) {
     .hidden-xs{
         display: inherit !important;
+    }
+
+    .hidden-sm{
+        display: none !important;
     }
 
     main{
@@ -132,47 +137,96 @@ header a{
         order: -1;
         flex-shrink: 0;
         width: 230px;
-        height: calc(100vh - 150px);
+        height: calc(100vh - 90px);
         background-color: #000;
-        padding: 24px 15px;
+        padding: 24px 10px;
+        position: relative;
     }
 
     #main-menu .logo{
         padding-bottom: 18px;
-        padding-left: 9px;
+        padding-left: 14px;
+        opacity: 1;
     }
 
     #main-menu button{
         width: 100%;
-        padding: 10px;
+        padding: 10px 15px;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
     }
 
+    #main-menu .active{
+        background-color: #222;
+    }
+
+    #main-menu span{
+        margin-left: 15px;
+        margin-top: 0;
+        font-size: 13px;
+        font-weight: 800;
+    }
+
+    #main-menu p{
+        margin: 24px 15px 8px;
+        opacity: .5;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
     #main-menu a{
         width: 100%;
-        padding: 10px;
+        padding: 0 15px;
+        font-size: 14px;
         display: flex;
         align-items: center;
+        opacity: .5;
     }
 
     #main-menu button .square{
-        background-color: white;
+        background-color: #fff;
+    }
+
+    #main-menu button .square span{
+        color: #000;
+        font-size: 30px;
+        font-weight: 400;
+        margin: auto;
+    }
+
+    #main-menu a .square i{
+        font-size: 16px;
+        margin: 8px;
     }
 
     #main-menu a .square{
         background: linear-gradient(135deg, #450af5, #c4efd9);
     }
 
-    #main-menu span{
-        margin-left: 15px;
-        margin-top: 0;
+    #main-menu hr{
+        width: 180px;
+        margin: 15px 10px;
+        opacity: .15;
+    }
+
+    #main-menu a:nth-last-child(2){
+        margin-top: 15px;
+    }
+
+    #main-menu a:last-child{
+        position: absolute;
+        bottom: 15px;
+    }
+
+    #main-menu button:hover,
+    #main-menu a:hover{
+        opacity: 1;
     }
 
     #main-view{
         width: calc(100% - 230px);
-        height: calc(100vh - 150px);
+        height: calc(100vh - 90px);
         background-color: #111;
         background-image: none;
     }
@@ -180,6 +234,6 @@ header a{
     #main-player{
         flex-shrink: 0;
         width: 100%;
-        height: 150px;
+        height: 90px;
     }
 }
