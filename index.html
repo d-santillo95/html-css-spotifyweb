@@ -155,19 +155,52 @@
                 </div>
             </div>
             <div id="main-player">
-                <button>
-                    <i class="far fa-heart"></i>
-                </button>
-                <div id="info-song">
-                    <p class="title"></p>
-                    <p class="artist"></p>
+                <div class="container-info">
+                    <button class="like">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="wrap-img hidden-xs">
+                        <img src="https://i.scdn.co/image/ab67616d0000485160e1715f913076b0e4396ac0" alt="">
+                    </div>
+                    <div id="info-song">
+                        <a class="title">Se ti tagliassero a pezzeti</a>
+                        <a class="artist">Fabrizio De Andrè</a>
+                    </div>
+                    <button class="maximize visible-md">
+                        <i class="far fa-window-maximize"></i>
+                    </button>
                 </div>
                 <div id="music-player">
-                    <button>
-                        <i class="far fa-pause-circle"></i>
-                    </button>
-                    <button>
-                        <i class="fas fa-step-forward"></i>
+                    <div id="controller">
+                        <button class="hidden-xs">
+                            <i class="fas fa-random"></i>
+                        </button>
+                        <button class="hidden-xs">
+                            <i class="fas fa-step-backward"></i>
+                        </button>
+                        <button id="pause">
+                            <i class="far fa-pause-circle"></i>
+                        </button>
+                        <button>
+                            <i class="fas fa-step-forward"></i>
+                        </button>
+                        <button class="hidden-xs">
+                            <i class="fas fa-retweet"></i>
+                        </button>
+                    </div>
+                    <div id="music-range" class="hidden-xs">
+                        <span>1:56</span>
+                        <div class="circle">
+                        </div>
+                        <span>5:00</span>
+                    </div>
+                </div>
+                <div id="controller-volume" class="visible-md">
+                    <button><i class="fas fa-layer-group"></i></button>
+                    <button><i class="fas fa-desktop"></i></button>
+                    <button id="volume">
+                        <i class="fas fa-volume-up"></i>
+                        <div class="circle"></div>
                     </button>
                 </div>
             </div>

@@ -118,8 +118,39 @@ header a{
     align-items: center;
 }
 
-#main-player i{
+.container-info{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#main-player button{
     font-size: 24px;
+    margin-right: 10px;
+}
+
+#info-song{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: calc(100% - 35px);
+}
+
+.title{
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.artist{
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    opacity: .5;
 }
 
 #main-menu{
@@ -362,6 +393,132 @@ header a{
         width: 100%;
         height: 90px;
     }
+
+    .container-info{
+        justify-content: flex-start;
+        width: auto;
+    }
+
+    #main-player .like{
+        order: 1;
+        opacity: 1;
+    }
+
+    #main-player .fa-heart{
+        font-weight: 800;
+        color: #1db954;
+    }
+
+    .container-info .wrap-img{
+        margin-right: 15px;
+    }
+
+    #music-player{
+        width: calc(100% - 300px);
+        max-width: 850px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #controller{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 250px;
+    }
+
+    #music-range{
+        width: 90%;
+        padding: 30px 0 10px;
+        position: relative;
+    }
+
+    #music-range span{
+        font-size: 14px;
+    }
+
+    #music-range span:first-child{
+        position: absolute;
+        left:0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #music-range span:last-child{
+        position: absolute;
+        left: calc(100% - 27px);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #music-range .circle{
+        display: none;
+        width: 15px;
+        height: 15px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: calc(40% - 7.5px);
+        transform: translateY(-50%);
+    }
+
+    #music-range::before{
+        content: " ";
+        width: calc(40% - 35px);
+        height: 4px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 35px;
+        transform: translateY(-50%);
+    }
+
+    #music-range::after{
+        content: " ";
+        width: calc(60% - 35px);
+        height: 4px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translateY(-50%);
+        opacity: 0.5
+    }
+
+    #music-range:hover{
+        cursor: pointer;
+    }
+
+    #music-range:hover .circle{
+        display: block;
+    }
+
+    #music-range:hover::before{
+        background-color: #1db954;
+    }
+
+    #pause i{
+        font-size: 28px;
+    }
+
+    #pause:hover{
+        transform: scale(1.1);
+    }
+
+    #main-player .container-info button{
+        margin-right: 0;
+    }
+
+    #main-player button{
+        margin-left: 15px;
+        font-size: 14px;
+        opacity: 0.5;
+    }
+
+    #main-player button:hover{
+        opacity: 1;
+    }
 }
 
 @media (min-width:1024px){
@@ -390,5 +547,78 @@ header a{
 
     .btn:hover{
         transform: scale(1.1);
+    }
+
+    .maximize{
+        order: 2;
+    }
+
+    #controller-volume{
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex-shrink: 0;
+        width: 200px;
+    }
+
+    #controller-volume button{
+        margin: 0 7.5px;
+    }
+
+    #controller-volume #volume{
+        opacity: 1;
+        padding-right: 87px;
+    }
+
+    #controller-volume #volume i{
+        color: #999;
+    }
+
+    #volume::before{
+        content: " ";
+        width: 60px;;
+        height: 4px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+
+    #volume::after{
+        content: " ";
+        width: 20px;
+        height: 4px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: calc(45% + 60px);
+        transform: translateY(-50%);
+        opacity: .5;
+    }
+
+    #volume .circle{
+        display: none;
+        width: 15px;
+        height: 15px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: calc(45% + 52.5px);
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+
+    #controller-volume #volume:hover i{
+        color: #fff;
+    }
+
+    #volume:hover::before{
+        background-color: #1db954;
+    }
+
+    #volume:hover .circle{
+        display: block;
     }
 }
