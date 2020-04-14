@@ -123,6 +123,7 @@ header a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 
 .container-info{
@@ -169,9 +170,13 @@ header a{
     height: 60px;
     background-color: #222;
     border-top: 1px solid black;
+}
+
+.container-menu{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 100%;
 }
 
 #main-menu button{
@@ -214,8 +219,9 @@ header a{
     }
 
     #main-menu{
+        display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: flex-start;
         order: -1;
         flex-shrink: 0;
@@ -223,7 +229,15 @@ header a{
         height: calc(100vh - 90px);
         background-color: #000;
         padding: 24px 10px;
-        position: relative;
+        overflow: auto;
+    }
+
+    .container-menu{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+        flex-shrink: 0;
     }
 
     #main-menu .logo{
@@ -293,13 +307,8 @@ header a{
         opacity: .15;
     }
 
-    #main-menu a:nth-last-child(2){
-        margin-top: 15px;
-    }
-
     #main-menu a:last-child{
-        position: absolute;
-        bottom: 15px;
+        margin-top: 15px;
     }
 
     #main-menu button:hover,
